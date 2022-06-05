@@ -20,5 +20,5 @@
   transition: all 0.5s;
 }
 .card-city-content {
-  transform: skewY(5deg);
+  transform: skewY(0deg);
 }

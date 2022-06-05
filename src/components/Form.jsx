@@ -4,7 +4,7 @@ import { Formik } from "formik";
 const Form = () => {
   return (
     <div>
-      <h1>Contact Form</h1>
+      <h1 data-aos="zoom-in">Contact Form</h1>
       <Formik
         initialValues={{ email: "", name: "" }}
         validate={(values) => {
@@ -51,6 +51,7 @@ const Form = () => {
                 value={values.name}
                 className="w-full border-[1px] border-[#ccc] h-[50px] mt-[10px] pl-[10px]"
                 placeholder="Full Name"
+                data-aos="zoom-in"
               />
             </div>
             <div className="text-[14px] text-red-500 mt-[5px]">
@@ -65,6 +66,7 @@ const Form = () => {
                 value={values.email}
                 className="w-full border-[1px] border-[#ccc] h-[50px] mt-[10px] pl-[10px]"
                 placeholder="Email"
+                data-aos="zoom-in"
               />
             </div>
             <div className="text-[14px] text-red-500 mt-[5px]">
@@ -79,6 +81,7 @@ const Form = () => {
                 cols="30"
                 rows="10"
                 placeholder="Content Email"
+                data-aos="zoom-in"
               ></textarea>
             </div>
 
@@ -86,6 +89,7 @@ const Form = () => {
               className="w-[150px] h-[50px] bg-[#333] text-white rounded-[5px] mt-[10px] uppercase"
               type="submit"
               disabled={isSubmitting}
+              data-aos="zoom-in"
             >
               send mail
             </button>

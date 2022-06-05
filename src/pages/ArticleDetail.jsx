@@ -4,6 +4,11 @@ import { useParams } from "react-router-dom";
 import "../style/ArticleDetail.css";
 import qs from "qs";
 import CardCity from "./CardCity";
+//
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const ArticleDetail = () => {
   const { id } = useParams();
   const [detailArticle, setDetailArticle] = useState({
@@ -63,37 +68,58 @@ const ArticleDetail = () => {
           src={imgItem}
           alt=""
           className="bg-article-detail w-full h-[100vh]"
+          data-aos="zoom-in"
         />
-        <div className="absolute uppercase text-[50px] font-bold text-white top-[50%] right-[50%] z-10">
+        <div
+          className="absolute uppercase text-[50px] font-bold text-white top-[50%] right-[50%] z-10"
+          data-aos="zoom-in"
+        >
           {detailArticle.data?.attributes?.location}
         </div>
       </div>
       <div className="w-[1200px] mx-auto pt-[100px]">
         <div className="article-content ">
-          <div className="text-[20px] text-red-500 mb-[50px]">OverView</div>
-          <div className="article-detail-content-decs mb-[50px] w-[700px] leading-[2] text-[#777]">
+          <div
+            className="text-[20px] text-red-500 mb-[50px]"
+            data-aos="zoom-in"
+          >
+            OverView
+          </div>
+          <div
+            className="article-detail-content-decs mb-[50px] w-[700px] leading-[2] text-[#777]"
+            data-aos="zoom-in"
+          >
             {detailArticle.data?.attributes?.title}
           </div>
-          <div className="text-[20px] text-red-500">Good to know</div>
+          <div className="text-[20px] text-red-500" data-aos="zoom-in">
+            Good to know
+          </div>
         </div>
         <div className="w-[700px] mt-[80px] text-[#777]">
           <div className="flex justify-between py-[16px] border-b-[1px] border-dashed border-[#ccc]">
-            <p className="language">Language</p>
-            <p className="language-nation">
+            <p className="language" data-aos="zoom-in">
+              Language
+            </p>
+            <p className="language-nation" data-aos="zoom-in">
               {detailArticle.data?.attributes?.Language}
             </p>
           </div>
           <div className="flex justify-between mt-[10px] py-[16px] border-b-[1px] border-dashed border-[#ccc]">
-            <p className="language">Currency</p>
-            <p className="language-nation">
+            <p className="language" data-aos="zoom-in">
+              Currency
+            </p>
+            <p className="language-nation" data-aos="zoom-in">
               {detailArticle.data?.attributes?.Currency}
             </p>
           </div>
         </div>
       </div>
-      <div className="bg-slate-100 card-city">
+      <div className="bg-slate-100 card-city" data-aos="zoom-in">
         <div className=" w-[1200px] mx-auto">
-          <div className="text-[20px] text-red-500 uppercase pb-[80px]">
+          <div
+            className="text-[20px] text-red-500 uppercase pb-[80px]"
+            data-aos="zoom-in"
+          >
             Cities in {detailArticle.data?.attributes?.type}
           </div>
           <div className="card-city-content w-[800px] flex justify-between">
