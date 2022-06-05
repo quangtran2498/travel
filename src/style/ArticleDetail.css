@@ -1,0 +1,24 @@
+.bg-article-detail {
+  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 100%, 0% 60%, 0 0);
+}
+/* .article-content {
+  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 100%, 0% 60%, 0 0);
+} */
+
+.article-content {
+  transform: rotateZ(-3deg);
+}
+.card-city {
+  padding: 150px 0;
+  transform: skewY(-5deg);
+  margin-top: 80px;
+}
+.card-city-header:hover .card-city-header-image {
+  transform: scale(1.2);
+}
+.card-city-header-image {
+  transition: all 0.5s;
+}
+.card-city-content {
+  transform: skewY(5deg);
+}

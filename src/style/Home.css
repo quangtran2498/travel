@@ -1,0 +1,36 @@
+.section3 {
+  margin: 8rem 0;
+  background: #f6f6fb;
+  padding: 13rem 0;
+  transform: skewY(-5deg);
+}
+.section3-left-heading {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1.2;
+  background: linear-gradient(35deg, #000000 40%, #ff4d58 40%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: capitalize;
+}
+.section3-container {
+  transform: skewY(5deg);
+}
+.img-travel-item:hover .img-travel-item-img {
+  transform: scale(1.2);
+}
+.img-travel-item-img {
+  transition: all 0.5s;
+}
+.zoom-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}

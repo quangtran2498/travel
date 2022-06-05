@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+}
+
+.img-intro {
+  background: url(../assets/image/header/screen.png) top center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  /* position: relative; */
+  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 100%, 0% 60%, 0 0);
+  /* filter: grayscale(10%); */
+}
+.header-modal {
+  background: linear-gradient(to right, #ff4d58, #df2189);
+  color: #fff;
+  text-decoration: none;
+  width: 130px;
+  height: 45px;
+  padding: 0 10px;
+  border-radius: 5px;
+  /* z-index: 999; */
+}
