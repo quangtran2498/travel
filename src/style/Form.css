@@ -1,0 +1,25 @@
+.modal-rigister {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+}
+.modal-rigister-item {
+  width: 380px;
+  min-height: 340px;
+  background-color: white;
+  padding: 20px;
+}
+.modal-login-item {
+  width: 380px;
+  min-height: 200px;
+  background-color: white;
+  padding: 20px;
+}

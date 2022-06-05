@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/Header.css";
 import VideoAbout from "../assets/image/video/header.mp4";
+import FormRigister from "./FormRigister";
+import FormLogin from "./FormLogin";
 
 const Header = () => {
+  const [hideFormRigister, setHideFormRigister] = useState(false);
+  const [hideFormLogin, setHideFormLogin] = useState(false);
+
+  const handleShowFormRigister = () => {
+    setHideFormRigister(true);
+  };
+  //
+  const handleShowFormLogin = () => {
+    setHideFormLogin(true);
+    setHideFormRigister(false);
+  };
+  //
+  const handleHideFormRigister = () => {
+    setHideFormRigister(false);
+  };
+  //
+  const handleHideFormLogin = () => {
+    setHideFormLogin(false);
+  };
   return (
     <div className="header relative">
       <div className="about-video relative">
@@ -28,12 +49,28 @@ const Header = () => {
             >
               Design with ReactJS no Framework by Dino Dev
             </div>
-            <button className="header-modal " data-aos="zoom-in">
+            <button
+              onClick={handleShowFormRigister}
+              className="header-modal "
+              data-aos="zoom-in"
+            >
               Let's Start!
             </button>
           </div>
         </div>
       </div>
+      {hideFormRigister && (
+        <FormRigister
+          hideFormRigister={handleHideFormRigister}
+          showFormLogin={handleShowFormLogin}
+        />
+      )}
+      {hideFormLogin && (
+        <FormLogin
+          hideModalFormLogin={handleHideFormLogin}
+          showFormRigisterToLogin={handleShowFormRigister}
+        />
+      )}
     </div>
   );
 };
