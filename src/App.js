@@ -8,10 +8,12 @@ import Nav from "./components/Nav";
 import ScrollToTop from "./components/ScrollTop";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import FormData from "./components/FormData";
 //
 function App() {
   return (
     <div className="App ">
+      <div>quang test ..................... </div>
       <ScrollToTop />
       <Nav />
       <Layout>
@@ -19,12 +21,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/*  */}
           <Route path="/locations/:id" element={<ArticleDetail />} />
         </Routes>
       </Layout>
       <Footer />
+      <FormData />
     </div>
   );
 }

@@ -32,7 +32,7 @@ const ArticleDetail = () => {
     [id]
   );
   const location = detailArticle.data?.attributes?.type;
-  // console.log(location);
+  console.log(location);
 
   useEffect(() => {
     const query = qs.stringify(
@@ -44,7 +44,7 @@ const ArticleDetail = () => {
         populate: "*",
         filters: {
           types: {
-            $eq: location,
+            $eq: "us",
           },
         },
       },

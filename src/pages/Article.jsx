@@ -8,6 +8,9 @@ import CardArticle from "./CardArticle";
 AOS.init();
 
 const Article = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(true);
+
   const [articles, setArticles] = useState({
     data: [],
     meta: {},
@@ -25,6 +28,7 @@ const Article = () => {
         encodeValuesOnly: true,
       }
     );
+
     axiosClient.get(`/locations?populate=*?${query}`).then((response) => {
       setArticles(response);
     });
