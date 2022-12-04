@@ -13,6 +13,7 @@ import ReactGA from "react-ga4";
 //
 ReactGA.initialize("G-M0NPHRKVNK");
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+ReactGA.set({ quangtest: "" });
 const OnGa = () => {
   ReactGA.event({
     category: "your category",
@@ -20,11 +21,8 @@ const OnGa = () => {
     label: "your label", // optional
     value: 99, // optional, must be a number
     nonInteraction: true, // optional, true/false
-    transport: "xhr", // optional, beacon/xhr/image
-    quangTest: "co vao day ko",
-    options: {
-      quang: "quang test",
-    },
+    transport: "xhr", // optional
+    quangtest: "1234",
   });
 };
 function App() {
