@@ -12,6 +12,7 @@ import FormData from "./components/FormData";
 import ReactGA from "react-ga4";
 //
 ReactGA.initialize("G-M0NPHRKVNK");
+ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 const OnGa = () => {
   ReactGA.event({
     category: "your category",
@@ -20,6 +21,7 @@ const OnGa = () => {
     value: 99, // optional, must be a number
     nonInteraction: true, // optional, true/false
     transport: "xhr", // optional, beacon/xhr/image
+    quangTest: "co vao day ko",
   });
 };
 function App() {
