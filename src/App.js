@@ -9,11 +9,23 @@ import ScrollToTop from "./components/ScrollTop";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FormData from "./components/FormData";
+import ReactGA from "react-ga4";
 //
+ReactGA.initialize("G-M0NPHRKVNK");
+const OnGa = () => {
+  ReactGA.event({
+    category: "your category",
+    action: "your action",
+    label: "your label", // optional
+    value: 99, // optional, must be a number
+    nonInteraction: true, // optional, true/false
+    transport: "xhr", // optional, beacon/xhr/image
+  });
+};
 function App() {
   return (
     <div className="App ">
-      <div>quang test ..................... </div>
+      <div onClick={OnGa}>quang test ..................... </div>
       <ScrollToTop />
       <Nav />
       <Layout>
@@ -26,6 +38,7 @@ function App() {
       </Layout>
       <Footer />
       <FormData />
+      <div>quang test ..................... </div>
     </div>
   );
 }
