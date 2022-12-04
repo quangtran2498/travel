@@ -22,6 +22,9 @@ const OnGa = () => {
     nonInteraction: true, // optional, true/false
     transport: "xhr", // optional, beacon/xhr/image
     quangTest: "co vao day ko",
+    options: {
+      quang: "quang test",
+    },
   });
 };
 function App() {
