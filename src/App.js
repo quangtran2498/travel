@@ -12,8 +12,9 @@ import FormData from "./components/FormData";
 import ReactGA from "react-ga4";
 //
 ReactGA.initialize("G-M0NPHRKVNK");
+
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-ReactGA.set({ quangtest: "" });
+ReactGA.set({ quangtest: "dsadsadasdasda" });
 const OnGa = () => {
   ReactGA.event({
     category: "your category",
@@ -23,8 +24,10 @@ const OnGa = () => {
     nonInteraction: true, // optional, true/false
     transport: "xhr", // optional
     quangtest: "1234",
+    dimension: "quang test",
   });
 };
+
 function App() {
   return (
     <div className="App ">
