@@ -9,7 +9,9 @@ import ScrollToTop from "./components/ScrollTop";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FormData from "./components/FormData";
+
 import ReactGA from "react-ga4";
+import { logGaTracking } from "./configGa4";
 //
 ReactGA.initialize("G-M0NPHRKVNK");
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
@@ -28,6 +30,7 @@ const OnGa = () => {
   ReactGA.gtag("event", "Redirect_Landing_Page", {
     event_action: "quang test gtag",
   });
+  logGaTracking("quangqwe");
 };
 // gtag("event", "login", {
 //   method: "Google",
