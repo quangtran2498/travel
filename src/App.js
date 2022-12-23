@@ -13,7 +13,7 @@ import FormData from "./components/FormData";
 import ReactGA from "react-ga4";
 import { logGaTracking } from "./configGa4";
 //
-ReactGA.initialize("G-M0NPHRKVNK");
+ReactGA.initialize("G-QLLWFJT0CW");
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 ReactGA.set({ quangtest: "dsadsadasdasda" });
 const gtag = window["gtag"];
