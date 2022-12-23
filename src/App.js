@@ -25,6 +25,9 @@ const OnGa = () => {
     quangtest: "1234", //! ko nhận
     dimension: "quang test",
   });
+  ReactGA.gtag("event", "Redirect_Landing_Page", {
+    event_action: "quang test gtag",
+  });
 };
 // gtag("event", "login", {
 //   method: "Google",
@@ -32,9 +35,7 @@ const OnGa = () => {
 
 const gtagConfig = window["gtag"];
 console.log("gtag", gtagConfig);
-ReactGA.gtag("event", "Redirect_Landing_Page", {
-  event_action: "quang test gtag",
-});
+
 function App() {
   return (
     <div className="App ">
