@@ -16,6 +16,8 @@ import { logGaTracking } from "./configGa4";
 ReactGA.initialize("G-M0NPHRKVNK");
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 ReactGA.set({ quangtest: "dsadsadasdasda" });
+const gtag = window["gtag"];
+
 const OnGa = () => {
   ReactGA.event({
     category: "your category",
@@ -27,6 +29,7 @@ const OnGa = () => {
     quangtest: "1234", //! ko nhận
     dimension: "quang test",
   });
+  gtag("event", "quang test dong 32", { quang: "123" });
   ReactGA.gtag("event", "Redirect_Landing_Page", {
     event_action: "quang test gtag",
   });
